@@ -11,99 +11,80 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 
 		List<String> listaCaracteres = new ArrayList<>();
+		List<String> Resultado = new ArrayList<>();
 		List<Character> listaFinal = new ArrayList<>();
 
 		String entrada;
 		String[] entradaDividida;
 
-		System.out.println("Digite a listagem de caracteres ");
+		// Separa os números por , e adiciona numa lista
+		System.out.println("Digite uma listagem de caracteres. Ex: 1,2,4,12,24 ");
 		entrada = sc.next();
 		entradaDividida = entrada.split(",");
 		List<String> chain = Arrays.asList(entradaDividida);
 
 		sc.close();
 
+		// Verifica se o número é de 2 ou mais algoritmos
 		for (String caracter : chain) {
 			if (caracter.length() > 1) {
 				listaCaracteres.add(caracter);
 			}
 		}
-		System.out.println(listaCaracteres);
-		
-		String[] saidaDividida =listaCaracteres.toArray(new String [0]);
 
-        for(int i = 0; i < saidaDividida.length; i++) {
-        	char[] digits1= saidaDividida[i].toCharArray();
-        	 for (char c : digits1) {
+		String[] saidaDividida = listaCaracteres.toArray(new String[0]);
+
+		// Separa número de dois algoritmos em dois números
+		for (int i = 0; i < saidaDividida.length; i++) {
+			char[] digits1 = saidaDividida[i].toCharArray();
+			for (char c : digits1) {
 				listaFinal.add(c);
 			}
-        }
-        System.out.println(listaFinal);
-        
-//        for (Character character : listaFinal) {
-//			for (String lc : listaCaracteres) {
-//				if(character.toString().equals(lc)) {
-//					System.out.println(character);
-//				}
-//			}
-//		}
-        
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		}
 
-//		for (int i = 0; i < entrada.length(); i++) {
-//
-//			char carac = entrada.charAt(i);
-//
-//			ch.add(carac);
-//		}
+		// Verifica quais números estão contidos nas duas listas e não adiciona os que
+		// se repetem
+		for (Character character : listaFinal) {
+			for (String lc : chain) {
+				if (lc.contains(character.toString())) {
+					if (!Resultado.contains(character.toString())) {
+						Resultado.add(character.toString());
+					}
+				}
+			}
+		}
 
-//		for (int i = 0; i < listaCaracteres.size(); i++) {
-//
-//		}
+		// Adiciona os números de dois algoritmos a lista Resultado
+		for (String validar : listaCaracteres) {
+			Resultado.add(validar);
+		}
 
-//		for (int i = 0; i < entrada.length(); i++) {
-//			
-//			char carac =entrada.charAt(i);
-//		
-//
-//			ch.add(carac);
-//		}
-//		System.out.println(ch);
-		// System.out.print(caracteres.charAt(i) + ",");
+		// Confere se o tamanho das listas são iguais
+		if (!(Resultado.size() == chain.size())) {
+			System.out.println("invalid");
+		} else {
+			List<String> valid = new ArrayList<>();
+			List<String> invalid = new ArrayList<>();
+			for (String verifica : Resultado) {
+				for (String lc : chain) {
+					if (lc.equals(verifica)) {
+						if (!valid.contains(verifica)) {
+							valid.add(verifica);
+						}
+					} else {
+						if (!invalid.contains(verifica)) {
+							invalid.add(verifica);
+						}
+					}
+				}
 
-		// System.out.println(chain.getCaracteres());
-//		 for (String ch : chain) {
-//				System.out.println(ch.substring(1));
-//			}
+			}
+			if (valid.size() == chain.size()) {
+				System.out.println("Valid Chain");
+			} else {
+				System.out.println("Invalid Chain");
+			}
+		}
 
 	}
 
