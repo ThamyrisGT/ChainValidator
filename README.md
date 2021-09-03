@@ -50,6 +50,16 @@ Utilize data structure to make the solution efficient.
 
 Expected Output Done:
 
+<img src="https://github.com/ThamyrisGT/ChainValidator/blob/main/Imagens/exemplo1.png" />
+
+<img src ="https://github.com/ThamyrisGT/ChainValidator/blob/main/Imagens/exemplo2.png" />
+
+<img src="https://github.com/ThamyrisGT/ChainValidator/blob/main/Imagens/exemplo3.png"/>
+
+<img src="https://github.com/ThamyrisGT/ChainValidator/blob/main/Imagens/exemplo4.png"/>
+
+
+
 
 
 
