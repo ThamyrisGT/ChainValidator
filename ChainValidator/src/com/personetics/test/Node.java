@@ -3,12 +3,13 @@ package com.personetics.test;
 import java.util.List;
 
 public interface Node {
-	String CARACTERES = null;
 
-	String getMessageInvalid();
+	void getMessageInvalid();
 
-	String getMessageValid();
+	void getMessageValid();
 
-	boolean validate(List<Node> nodes);
+	void checkAndSeparateDigits(List<String> chain);
+
+	boolean isValidate(List<String> resultado, List<String> chain);
 
 }
