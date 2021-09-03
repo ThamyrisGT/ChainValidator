@@ -50,11 +50,9 @@ Utilize data structure to make the solution efficient.
 
 Expected Output Done:
 
-![esse](C:\Users\User\Desktop\esse.png)
 
-![esse2](C:\Users\User\Desktop\esse2.png)
 
-![esse3](C:\Users\User\Desktop\esse3.png)
 
-![esse4](C:\Users\User\Desktop\esse4.png)
+
+
 
