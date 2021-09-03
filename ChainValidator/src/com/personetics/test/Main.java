@@ -14,7 +14,7 @@ public class Main {
 		String[] splitEntry;
 
 		System.out.println("Digite uma listagem de caracteres separado por ',' Ex: 12,1,2 ou ab,a,b ");
-		entry = sc.next();
+		entry= sc.next().toLowerCase();
 		splitEntry = entry.split(",");
 		List<String> chain = Arrays.asList(splitEntry);
 		sc.close();
