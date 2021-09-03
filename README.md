@@ -24,7 +24,7 @@ You can add additional classes as you wish.
 
  
 
-Examples:
+***Examples:\***
 
 Valid chain: 36, 6, 24, 4, 47, 7, 2, 3, 27  
 
@@ -36,7 +36,7 @@ You don’t have to take care of: “a”, 5, “asd” (or any mixed values lis
 
  
 
-Pointers:
+***Pointers:\***
 
 Give a correct answer.
 
@@ -48,7 +48,7 @@ Utilize data structure to make the solution efficient.
 
 
 
-Expected Output Done:
+***Expected Output Done:\***
 
 <img src="https://github.com/ThamyrisGT/ChainValidator/blob/main/Imagens/exemplo1.png" />
 
